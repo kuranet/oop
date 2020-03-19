@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab3
 {
@@ -10,16 +6,20 @@ namespace Lab3
     {
         private int[,] arr;
         private int rows, columns;
-        bool error;
+        private bool error;
+        private double sumSquare;
+
 
         public Array(int r, int c)
         {
             arr = new int[r, c];
             rows = r;
             columns = c;
+            GenData();
             error = false;
+            sumsq();
         }
-        public void GenData()
+        private void GenData()
         {
             Random rn = new Random();
             for (int i = 0; i < rows; i++)
@@ -55,21 +55,25 @@ namespace Lab3
             if (index >= 0 & index < columns) return true;
             return false;
         }
+
+        private void sumsq()
+        {
+            double sumsq = 0;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    sumsq += Math.Pow(arr[i, j], 2);
+                }
+            }
+
+            sumsq /= rows * columns;
+            sumSquare = Math.Sqrt(sumsq);
+        }
          public double SumSquare {
             get
             {
-                double sumsq = 0;
-                for(int i = 0; i< rows; i++)
-                {
-                    for (int j = 0; j < columns; j++)
-                    {
-                        sumsq += Math.Pow(arr[i, j],2);
-                    }
-                }
-                                              
-                sumsq /= rows * columns;
-                sumsq = Math.Sqrt(sumsq);
-                return sumsq;
+                return sumSquare;
             }
          }
     }

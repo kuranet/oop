@@ -8,7 +8,7 @@ namespace lab5._2
         public double Len { get; protected set; }
         public bool error { get; protected set; }
 
-        public  Str() { str = ""; Len = 0; error = false; }
+        public  Str() { str = ""; Len = 0; error = true; }
         public Str(string s) { str = s; Len = str.Length;  error = false; }
 
         public virtual void Lenght()

@@ -27,16 +27,16 @@ namespace lab5._2
             Letters let = new Letters("srfdhjklti");
             Number num = new Number("12345");
 
-            Console.WriteLine("Length Str: "+str.Len);
-            Console.WriteLine("Length Letters: "+let.Len);
-            Console.WriteLine("Length Number: "+num.Len);
+            Console.WriteLine("Length Str: " + str.Len);
+            Console.WriteLine("Length Letters: " + let.Len);
+            Console.WriteLine("Length Number: " + num.Len);
 
             Console.WriteLine();
 
             str.Processing();
             let.Processing();
             num.Processing();
-            Console.WriteLine("After processing Str: "+str.str);
+            Console.WriteLine("After processing Str: " + str.str);
             Console.WriteLine("After processing Letters: " + let.str);
             Console.WriteLine("After processing Number: " + num.str);
             Console.WriteLine("Length Number: " + num.Len);

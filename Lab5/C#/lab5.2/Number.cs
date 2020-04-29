@@ -23,8 +23,14 @@ namespace lab5._2
         }
 
         public override void Processing()
-        {            
-            this.str = str + str;
+        {
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (Char.IsNumber(str[i]))
+                {
+                    str = str.Insert(++i, str[i-1].ToString());
+                }
+            }
             this.Lenght();
         }
     }

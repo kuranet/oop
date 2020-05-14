@@ -16,14 +16,7 @@ int main()
 	srand(time(NULL));
 	for (int i = 0; i < Length; i++)
 	{
-		try
-		{
-			expression[i] = new MathExpression(rand() % 10 - 5, rand() % 10 - 5, rand() % 10 + 15, rand() % 10 - 5);
-		}
-		catch (out_of_range ex)
-		{
-			logList[i] = ex.what();
-		}
+		expression[i] = new MathExpression(rand() % 10 - 5, rand() % 10 - 5, rand() % 10 + 15, rand() % 10 - 5);	
 	}
 
 	for (int i = 0; i < Length; i++)

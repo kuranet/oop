@@ -27,6 +27,17 @@ namespace lab6
                 }
             }
             ExampleFunction();
+
+            using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter(@"C:\Users\Ann\oop\Lab6\C#\lab6\loglist.txt"))
+            {
+                foreach (string log in loglist)
+                {
+                    
+                    file.WriteLine(log);
+                    
+                }
+            }
         }
 
         static void ExampleFunction()
